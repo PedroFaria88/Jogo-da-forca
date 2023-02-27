@@ -6,7 +6,7 @@
 }
 
 html{
-background-image: url(imagens/quadro\ negro.jpg);
+background-image: url(imagens/quadronegro.jpg);
 background-size: cover;
 }
 
@@ -67,4 +67,13 @@ img{
 
 #forca1, #forca2, #forca3, #forca4, #forca5, #enforcado, #vitorioso{
     display: none;
+}
+
+@media only screen and (max-width: 400px){
+    
+html{
+    background-image: url(imagens/quadronegrovert.jpg);
+    background-size: auto;
+}
+
 }

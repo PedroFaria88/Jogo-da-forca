@@ -320,7 +320,6 @@ document.getElementById("z").onclick = function(){
     jogo(letra);
     document.getElementById("z").disabled = true;
 }
-
 document.getElementById("refresh").onclick = function(){
     window.location.reload();
 };
