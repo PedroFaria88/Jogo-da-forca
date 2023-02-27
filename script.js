@@ -1,5 +1,4 @@
-let palavrasPossiveis = ["caos", "besta", "mitos", "celas", "notas", "mosca", "ácido", "firmeza","cavalo", "republicanos","feliz","deus","carinho","janeiro","narigudo","querido","tempo","vento","brilho","universo", "acabou", "computador", "garrafa", "apartamento", "elefante", "camomila", "crocodilo", "acumulador", "geladeira", "cozinha", "fazenda", "zebra", "rainha", "patriota", "caminho", "montanha", "escorregador", "maremoto", "antraz", "onda", "acidentado", "apaixonar", "coleira", "proliferação", "almofadado", "peixaria", "narcisismo", "esforçado", "aldeia",
-"nevasca", "relâmpago", "ingressar", "pequeno", "visivelmente", "ambicionar", "matagal", "mamão", "extraordinário", "etanol", "remanescente", "asiático", "acumular", "eletroquímica", "complicação", "dígito", "escovar", "detonador", "falsificado", "combate", "documental", "gavião", "positividade", "baú", "justificante", "brigadista", "hostilizado", "evoluído", "proclamado", "instrumentista", "hipódromo", "desarmonia", "tipografia", "tinta", "reanimar", "matriarca", "admissão", "usurário", "incrementa", "dislexia", "orangotango", "turba", "inocente", "corneta", "limpar", "talhar", "cintura", "preocupado", "silencioso", "amanhã", "retirar"];
+let palavrasPossiveis = ["cáos", "besta", "mitos", "celas", "notas", "mosca", "ácido", "firmeza","cavalo", "republicanos","feliz","deus","carinho","janeiro","narigudo","querido","tempo","vento","brilho","universo", "acabou", "computador", "garrafa", "apartamento", "elefante", "camomila", "crocodilo", "acumulador", "geladeira", "cozinha", "fazenda", "zebra", "rainha", "patriota", "caminho", "montanha", "escorregador", "maremoto", "antraz", "onda", "acidentado", "apaixonar", "coleira", "proliferação", "almofadado", "peixaria", "narcisismo", "esforçado", "aldeia", "nevasca", "relâmpago", "ingressar", "pequeno", "visivelmente", "ambicionar", "matagal", "mamão", "extraordinário", "etanol", "remanescente", "asiático", "acumular", "eletroquímica", "complicação", "dígito", "escovar", "detonador", "falsificado", "combate", "documental", "gavião", "positividade", "baú", "justificante", "brigadista", "hostilizado", "evoluído", "proclamado", "instrumentista", "hipódromo", "desarmonia", "tipografia", "tinta", "reanimar", "matriarca", "admissão", "usuário", "incrementa", "dislexia", "orangotango", "turba", "inocente", "corneta", "limpar", "talhar", "cintura", "preocupado", "silencioso", "amanhã", "retirar"];
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -12,12 +11,12 @@ x = getRandomInt(0,100);
 let palavra = palavrasPossiveis[x];
 let resposta = palavra;
 let tamanho = palavra.length;
-let campo = ["| "];
+let campo = [""];
 
 
 
 for (i = 0; i < tamanho ; i ++){
-    campo.push("_ ");
+    campo.push("_");
 }
 let erros = 0;
 document.getElementById("campo").value = campo.join(" ");
@@ -166,7 +165,8 @@ function jogo(x){
     }
 
     if (erros >= 6){
-        document.getElementById("narrador").innerHTML = "Você morreu!" + "A palavra era ''" + resposta + "''";
+        document.getElementById("narrador").innerHTML = "Você morreu!";
+        document.getElementById("campo").value = resposta.split("").join(" ");
         let buttons = document.getElementsByTagName("button");
         for (let button of buttons) {
           button.disabled = true;
@@ -174,7 +174,7 @@ function jogo(x){
 
     }
 
-    if(campo.includes("_ ") == false){
+    if(campo.includes("_") == false){
         document.getElementById("narrador").innerHTML = "Parabéns!!!";
         document.getElementById("forca0").style.display = "none";
         document.getElementById("forca1").style.display = "none";
@@ -319,11 +319,11 @@ document.getElementById("z").onclick = function(){
     let letra = "z";
     jogo(letra);
     document.getElementById("z").disabled = true;
-   
 }
 
-
-
+document.getElementById("refresh").onclick = function(){
+    window.location.reload();
+};
 
 
 

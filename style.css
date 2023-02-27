@@ -1,48 +1,68 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: corda;
-    src: url(fonte/Alpharope-MVVr.ttf);
+    font-family: giz;
+    src: url(fonte/CrayonHandRegular2016Demo.ttf);
 }
 
 html{
+background-image: url(imagens/quadro\ negro.jpg);
+background-size: cover;
+}
 
+body{
+    text-align: center;
+    
 }
 
 #forca{
     display: inline-block;
-    background-color: lightgrey;
     margin-left: auto;
     
 }
 #teclado{
     text-align: center;
-    background-color: burlywood;
     display: inline-block;
-    width: 500px;
-   
-    
-    
+    width: 500px
+}
+
+#narrador{
+    font-family: giz, sans-serif;
+    font-size: 3.5em;
+    color: white;
 }
 
 #campo{
-    font-size: 3em;
+    font-size: 2.5em;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-family: giz, sans-serif;
+    text-transform: capitalize;
+    width: 550px;
+    line-height: 1.5em;
 }
 
 button{
     width: 45px;
     height: 45px;
-    font-family: corda, sans-serif;
+    font-family: giz, sans-serif;
     font-size: 2em;
-    background-image: url(imagens/fundo2corte.png);
-    background-size: cover;
-    color: rgb(224, 169, 97)
-    
-    
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+button:disabled{
+    text-decoration: line-through;
+}
+
+#refresh{
+    text-indent: -80px;
 }
 
 img{
-    height: 300px;
+    height: 400px;
 }
 
 #forca1, #forca2, #forca3, #forca4, #forca5, #enforcado, #vitorioso{
