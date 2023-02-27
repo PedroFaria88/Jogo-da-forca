@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: corda;
+    src: url(fonte/Alpharope-MVVr.ttf);
+}
+
+html{
+
+}
+
+#forca{
+    display: inline-block;
+    background-color: lightgrey;
+    margin-left: auto;
+    
+}
+#teclado{
+    text-align: center;
+    background-color: burlywood;
+    display: inline-block;
+    width: 500px;
+   
+    
+    
+}
+
+#campo{
+    font-size: 3em;
+}
+
+button{
+    width: 45px;
+    height: 45px;
+    font-family: corda, sans-serif;
+    font-size: 2em;
+    background-image: url(imagens/fundo2corte.png);
+    background-size: cover;
+    color: rgb(224, 169, 97)
+    
+    
+}
+
+img{
+    height: 300px;
+}
+
+#forca1, #forca2, #forca3, #forca4, #forca5, #enforcado, #vitorioso{
+    display: none;
+}
