@@ -13,8 +13,6 @@ let resposta = palavra;
 let tamanho = palavra.length;
 let campo = [""];
 
-
-
 for (i = 0; i < tamanho ; i ++){
     campo.push("_");
 }
@@ -128,11 +126,9 @@ function jogo(x){
         }
     }
 
-
     if(acerto == false){
         erros = erros +1;
         
-
         switch(erros){
             case 1:
                 document.getElementById("forca0").style.display = "none";
@@ -159,7 +155,6 @@ function jogo(x){
                 document.getElementById("enforcado").style.display = "inline";
         }
 
-        
         document.getElementById("narrador").innerHTML = "Tente outra letra..."
 
     }
@@ -171,7 +166,6 @@ function jogo(x){
         for (let button of buttons) {
           button.disabled = true;
         }
-
     }
 
     if(campo.includes("_") == false){
@@ -186,7 +180,6 @@ function jogo(x){
         document.getElementById("vitorioso").style.display = "inline";
     }
 }
-
 
 
 document.getElementById("a").onclick = function(){
@@ -320,6 +313,7 @@ document.getElementById("z").onclick = function(){
     jogo(letra);
     document.getElementById("z").disabled = true;
 }
+
 document.getElementById("refresh").onclick = function(){
     window.location.reload();
 };

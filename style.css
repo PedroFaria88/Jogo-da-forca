@@ -12,13 +12,11 @@ background-size: cover;
 
 body{
     text-align: center;
-    
 }
 
 #forca{
     display: inline-block;
     margin-left: auto;
-    
 }
 #teclado{
     text-align: center;
@@ -69,11 +67,21 @@ img{
     display: none;
 }
 
+@media only screen and (max-width: 550px){
+    
+#teclado{
+    padding-left: 25px;
+}
+
+img{
+    padding-left: 60px;
+}
+}
+
 @media only screen and (max-width: 400px){
     
 html{
     background-image: url(imagens/quadronegrovert.jpg);
     background-size: auto;
 }
-
 }
