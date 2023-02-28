@@ -111,6 +111,16 @@ function jogo(x){
             acerto = true;
             }
         }
+        if (palavra.includes("ô")){
+            while(palavra.includes("ô") == true){
+            let q = (palavra.indexOf("ô")) ;
+            campo.splice(q+1 , 1, "ô");
+            palavra = palavra.replaceAt(q, "0");
+            document.getElementById("campo").value = campo.join(" ");
+            document.getElementById("narrador").innerHTML = "Certo!!"
+            acerto = true;
+            }
+        }
     }
 
     if (x == "u"){
@@ -118,6 +128,19 @@ function jogo(x){
             while(palavra.includes("ú") == true){
             let q = (palavra.indexOf("ú")) ;
             campo.splice(q+1 , 1, "ú");
+            palavra = palavra.replaceAt(q, "0");
+            document.getElementById("campo").value = campo.join(" ");
+            document.getElementById("narrador").innerHTML = "Certo!!"
+            acerto = true;
+            }
+        }
+    }
+
+    if (x == "c"){
+        if (palavra.includes("ç")){
+            while(palavra.includes("ç") == true){
+            let q = (palavra.indexOf("ç")) ;
+            campo.splice(q+1 , 1, "ç");
             palavra = palavra.replaceAt(q, "0");
             document.getElementById("campo").value = campo.join(" ");
             document.getElementById("narrador").innerHTML = "Certo!!"
