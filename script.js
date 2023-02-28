@@ -189,6 +189,8 @@ function jogo(x){
         for (let button of buttons) {
           button.disabled = true;
         }
+        document.getElementById("refresh").disabled = false;
+
     }
 
     if(campo.includes("_") == false){
